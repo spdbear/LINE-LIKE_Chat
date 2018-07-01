@@ -1,0 +1,25 @@
+{
+  "version": "1.0.0",
+  "name": "LINE-LIKE Chat",
+  "launch_path": "/index.html",
+  "description": "Fork of the Friendly-Chat",
+  "developer": {
+    "name": "Speedy Bear",
+  },
+  "installs_allowed_from": [
+    "*"
+  ],
+  "default_locale": "ja",
+  "permissions": {
+  },
+  "locales": {
+    "en": {
+      "name": "Friendly Chat",
+      "description": "LIKE like Chat with friends using Firebase"
+    }
+    "ja": {
+      "name": "LINEのようなもの",
+      "description": "Firebaseのサンプルを使ったLINEのようなチャット"
+    }
+  }
+}
