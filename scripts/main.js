@@ -183,6 +183,7 @@ FriendlyChat.prototype.signInAnony = function() {
 FriendlyChat.prototype.signOut = function() {
     // Sign out of Firebase.
     this.auth.signOut();
+    window.location.reload(false);//メッセージを表示させない
 };
 
 // Triggers when the auth state change for instance when the user signs-in or signs-out.
