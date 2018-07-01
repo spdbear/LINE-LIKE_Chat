@@ -282,10 +282,14 @@ FriendlyChat.prototype.displayMessage = function(key, name, text, time, picUrl, 
   // console.log(name);
   // console.log(this.auth.currentUser.displayName);
   const d = new Date(time);
-  const hour = ( d.getHours()   < 10 ) ? '0' + d.getHours()   : d.getHours();
-  const min  = ( d.getMinutes() < 10 ) ? '0' + d.getMinutes() : d.getMinutes();
-  const sec  = ( d.getSeconds() < 10 ) ? '0' + d.getSeconds() : d.getSeconds();
-  const displayedTime = hour + ':' + min + ':' + sec;
+  // const year = d.getFullYear(); //年を区別するほど長く使われないので要らない
+  const mon   = d.getMonth() + 1;
+  const month = ( mon < 10 ) ? '0' + mon : mon;
+  const day   = ( d.getDate()    < 10 ) ? '0' + d.getDate()    : d.getDate();
+  const hour  = ( d.getHours()   < 10 ) ? '0' + d.getHours()   : d.getHours();
+  const min   = ( d.getMinutes() < 10 ) ? '0' + d.getMinutes() : d.getMinutes();
+  const sec   = ( d.getSeconds() < 10 ) ? '0' + d.getSeconds() : d.getSeconds();
+  const displayedTime =  month + '/' +  day + ' ' + hour + ':' + min + ':' + sec;
 
 
   var div = document.getElementById(key);
